@@ -1,0 +1,15 @@
+# Virtual environment
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Credentials
+kaggle.json
+access_token
+.kaggle/
+.env
+
+# Dataset: downloaded from Kaggle, see README.md
+data/*
+!data/.gitkeep
