@@ -642,7 +642,6 @@ dependencies = [
     { name = "pydantic" },
     { name = "scikit-learn" },
     { name = "uvicorn" },
-    { name = "xgboost" },
 ]
 
 [package.dev-dependencies]
@@ -653,6 +652,7 @@ dev = [
     { name = "requests" },
     { name = "seaborn" },
     { name = "six" },
+    { name = "xgboost" },
 ]
 
 [package.metadata]
@@ -662,7 +662,6 @@ requires-dist = [
     { name = "pydantic", specifier = ">=2.14.2" },
     { name = "scikit-learn", specifier = ">=1.9.1" },
     { name = "uvicorn", specifier = ">=0.54.0" },
-    { name = "xgboost", specifier = ">=3.4.1" },
 ]
 
 [package.metadata.requires-dev]
@@ -673,6 +672,7 @@ dev = [
     { name = "requests", specifier = ">=2.34.2" },
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "six", specifier = ">=1.17.0" },
+    { name = "xgboost", specifier = ">=3.4.1" },
 ]
 
 [[package]]

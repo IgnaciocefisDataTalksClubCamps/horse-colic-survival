@@ -8,7 +8,6 @@ dependencies = [
     "pydantic>=2.14.2",
     "scikit-learn>=1.9.1",
     "uvicorn>=0.54.0",
-    "xgboost>=3.4.1",
 ]
 
 [dependency-groups]
@@ -19,4 +18,5 @@ dev = [
     "requests>=2.34.2",
     "seaborn>=0.13.2",
     "six>=1.17.0",
+    "xgboost>=3.4.1",
 ]
