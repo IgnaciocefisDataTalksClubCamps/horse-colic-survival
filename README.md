@@ -37,8 +37,8 @@ Whether to keep `surgery` will be decided by comparing models with and without i
 
 1. **Data preparation:** clean the data, handle missing values and remove columns that leak information.
 2. **Exploratory data analysis:** study value ranges, missing values, the target distribution and feature importance.
-3. **Model training:** compare logistic regression, a decision tree, a random forest and XGBoost, tuning each one with stratified 5-fold cross-validation grouped by `hospital_number`, so that the same value never appears in both the training and validation folds.
-4. **Model selection:** choose a model using ROC AUC, with accuracy and F1 as supporting metrics, then evaluate it once on a 20% held-out test set that shares no `hospital_number` values with the training data.
+3. **Model training:** compare logistic regression, a decision tree, a random forest and XGBoost, tuning each one on a validation set. The data is split into train (60%), validation (20%) and test (20%), stratified and grouped by `hospital_number`, so that the same value never appears in more than one set.
+4. **Model selection:** choose a model using its ROC AUC on the validation set, with accuracy and F1 as supporting metrics. Then retrain it on train and validation together and evaluate it once on the test set.
 5. **Deployment:** serve the final model with FastAPI, package it with Docker and deploy it to the cloud.
 
 ## Results
