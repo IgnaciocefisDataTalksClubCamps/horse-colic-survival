@@ -10,6 +10,7 @@ from typing import Literal
 
 import pandas as pd
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, ConfigDict, Field
 
 from preprocessing import clean, to_dicts
@@ -85,3 +86,9 @@ def predict(horse: Horse) -> PredictResponse:
 def health() -> dict:
     """Check that the service is running."""
     return {"status": "ok"}
+
+
+@app.get("/", include_in_schema=False)
+def root() -> RedirectResponse:
+    """Redirect the root URL to the interactive documentation."""
+    return RedirectResponse(url="/docs")
