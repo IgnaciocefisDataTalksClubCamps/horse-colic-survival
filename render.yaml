@@ -1,0 +1,13 @@
+# Render Blueprint: deploys the web service from the Dockerfile on the free plan.
+# See https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: horse-colic-survival
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      # The container listens on 9696 (see the Dockerfile); Render's default is 10000
+      - key: PORT
+        value: "9696"
